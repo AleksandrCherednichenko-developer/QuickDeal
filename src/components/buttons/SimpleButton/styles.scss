@@ -1,0 +1,30 @@
+.simple__button {
+    @include transit('border-color, box-shadow');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+    padding: calc-rem(3px);
+    cursor: pointer;
+
+    &:focus-visible {
+        border-color: dodgerblue;
+        outline: none;
+    }
+
+    &:hover {
+        box-shadow: 0 0.5px 5px dodgerblue;
+
+        .simple__button-icon {
+            fill: dodgerblue;
+            opacity: 1;
+        }
+    }
+
+    &-icon {
+        @include transit('fill, opacity');
+        @include size(15px);
+    }
+}

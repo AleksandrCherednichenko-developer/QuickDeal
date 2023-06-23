@@ -1,0 +1,28 @@
+.input {
+    &-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    &-field {
+        @include transit('border-color');
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: calc-rem(10px) calc-rem(30px) calc-rem(10px) calc-rem(20px);
+        background-color: white;
+
+        &:focus-visible {
+            border-color: dodgerblue;
+            outline: none;
+        }
+    }
+
+    &-icon {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 10px;
+        cursor: pointer;
+    }
+}

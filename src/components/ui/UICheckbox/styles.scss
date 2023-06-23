@@ -1,0 +1,86 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    cursor: pointer;
+
+    p {
+        margin: 0;
+    }
+
+    &:hover {
+        p {
+            color: dodgerblue;
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    input:checked ~ span::before {
+        opacity: 1;
+    }
+
+    input:checked ~ span {
+        border-color: dodgerblue;
+    }
+
+    input:disabled ~ span {
+        opacity: 0.3;
+    }
+
+    span {
+        position: relative;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 20px;
+        max-height: 20px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 4px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        transition: 0.3s all;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            opacity: 0;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background-image: url("@/assets/icons/apply-white.svg");
+            background-color: dodgerblue;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            transition: 0.3s all;
+            -webkit-transition: 0.3s all;
+            -moz-transition: 0.3s all;
+            -ms-transition: 0.3s all;
+            -o-transition: 0.3s all;
+        }
+    }
+
+    p {
+        font: $fwBold var(--rem)/1.2 $fLato;
+        color: var(--font-color);
+        white-space: nowrap;
+        transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -o-transition: 0.2s all;
+    }
+}

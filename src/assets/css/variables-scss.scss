@@ -1,0 +1,58 @@
+// Fonts
+$fnLato: 'Lato';
+$fLato: $fnLato, sans-serif;
+
+// Font-weight
+$fwNormal: 400;
+$fwBold: 700;
+
+// z-index
+$z-index--10: -10;
+$z-index-10: 10;
+$z-index-20: 20;
+$z-index-30: 30;
+$z-index-50: 50;
+$z-index-90: 90;
+$z-index-100: 100;
+
+//Sizes
+$mwContent: 1170px;
+$pContent: 40px;
+$baseRem: 16px;
+
+//Medias
+$bXl: 1400px;
+$bLg: 1200px;
+$bMd: 992px;
+$bSm: 768px;
+$bXs: 576px;
+
+$mXl: '(max-width: #{$bXl - 1})';
+$mLg: '(max-width: #{$bLg - 1})';
+$mMd: '(max-width: #{$bMd - 1})';
+$mSm: '(max-width: #{$bSm - 1})';
+$mXs: '(max-width: #{$bXs - 1})';
+
+$mMoreXl: '(min-width: #{$bXl})';
+$mMoreLg: '(min-width: #{$bLg})';
+$mMoreMd: '(min-width: #{$bMd})';
+$mMoreSm: '(min-width: #{$bSm})';
+$mMoreXs: '(min-width: #{$bXs})';
+
+$bHXl: 1025px;
+$bHLg: 901px;
+$bHMd: 801px;
+$bHSm: 769px;
+$bHXs: 577px;
+
+$mHXl: '(max-height: #{$bHXl - 1})';
+$mHLg: '(max-height: #{$bHLg - 1})';
+$mHMd: '(max-height: #{$bHMd - 1})';
+$mHSm: '(max-height: #{$bHSm - 1})';
+$mHXs: '(max-height: #{$bHXs - 1})';
+
+$bMinWidth: 375px;
+
+$mMinWidth: '(max-width: #{$bMinWidth - 1})';
+$mMaxContent: '(max-width: #{$mwContent + 2 * $pContent})';
+$mPhoneHorizontal: '#{$mMd} and #{$mHXs} and (orientation: landscape)';

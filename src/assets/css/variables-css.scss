@@ -1,0 +1,39 @@
+:root {
+    --rem: #{$baseRem};
+    --pContent: #{$pContent};
+
+    // Breakpoints
+    --bXl: #{$bXl};
+    --bLg: #{$bLg};
+    --bMd: #{$bMd};
+    --bSm: #{$bSm};
+    --bXs: #{$bXs};
+
+    --bHXl: #{$bHXl};
+    --bHLg: #{$bHLg};
+    --bHMd: #{$bHMd};
+    --bHSm: #{$bHSm};
+    --bHXs: #{$bHXs};
+
+
+    @media #{$mXl} {
+        --rem: 14px;
+    }
+
+    @media #{$mXl}, #{$mHLg} {
+        --rem: 14px;
+    }
+
+    @media #{$mMd} {
+        --rem: 12px;
+        --pContent: 20px
+    }
+
+    @media #{$mSm} {
+        --rem: 10px;
+    }
+
+    @media #{$mXs} {
+        --pContent: 10px
+    }
+}

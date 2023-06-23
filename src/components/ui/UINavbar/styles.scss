@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: calc-rem(40px);
+
+    &-item {
+        @include transit('color');
+        color: inherit;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            @include transit('width, opaciti');
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: dodgerblue;
+        }
+
+        &--active {
+            color: dodgerblue;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
